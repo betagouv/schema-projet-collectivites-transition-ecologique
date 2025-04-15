@@ -104,7 +104,7 @@
           "name": "budgetPrevisionnel",
           "title": "Budget prévisionnel",
           "description": "Budget prévisionnel alloué au projet en euros.",
-          "example": 450000,
+          "example": "450000",
           "type": "integer"
        },
        {
@@ -366,7 +366,7 @@
                 ]
              }
           },
-          "example": ["90-21", "90-413"]
+          "examples": ["90-21", "90-413"]
        },
        {
           "name": "leviers",
@@ -430,7 +430,7 @@
                 ]
              }
           },
-          "example": ["Rénovation (hors changement chaudières)", "Electricité renouvelable"]
+          "examples": ["Rénovation (hors changement chaudières)", "Electricité renouvelable"]
        },
        {
           "name": "mecId",
@@ -461,7 +461,7 @@
              "type": "string",
              "format": "uuid"
           },
-          "example": ["01890e30-5a80-7c22-9842-8263d0d0d123"]
+          "examples": ["01890e30-5a80-7c22-9842-8263d0d0d123", "01890e30-5a80-7c22-9842-8263d0d0d124"]
        }
     ],
     "foreignKeys": [

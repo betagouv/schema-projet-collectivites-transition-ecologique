@@ -99,7 +99,7 @@
           "arrayItem": {
              "type": "string"
           },
-          "example": ["69"]
+          "examples": ["69", "01"]
        },
        {
           "name": "codeRegions",
@@ -109,7 +109,7 @@
           "arrayItem": {
              "type": "string"
           },
-          "example": ["84"]
+          "examples": ["84", "27"]
        },
        {
           "name": "codeEpci",
