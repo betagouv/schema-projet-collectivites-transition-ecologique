@@ -9,12 +9,12 @@ Un projet de transition écologique est caractérisé par les informations suiva
 | Nom du champ | Type | Description | Exemple |
 |--------------|------|-------------|---------|
 | id | uuid | Identifiant unique du projet | 01890e30-5a80-7c22-9842-8263d0d0d890 |
-| createdAt | datetime | Date de création du projet | 2024-04-15T14:30:00.000Z |
-| updatedAt | datetime | Date de dernière mise à jour | 2024-04-20T09:45:12.000Z |
+| createdAt | datetime | Date de création du projet | 2025-04-15T14:30:00.000Z |
+| updatedAt | datetime | Date de dernière mise à jour | 2025-04-15T14:30:00.000Z |
 | nom | string | Nom du projet | Rénovation énergétique des bâtiments publics |
 | description | string | Description détaillée du projet | Projet de rénovation énergétique des écoles et bâtiments administratifs... |
 | budgetPrevisionnel | integer | Budget prévisionnel en euros | 450000 |
-| dateDebutPrevisionnelle | string | Date prévue de début du projet (YYYY-MM-DD) | 2024-03-01 |
+| dateDebutPrevisionnelle | string | Date prévue de début du projet (YYYY-MM-DD) | 2025-03-01 |
 | phase | string | Phase actuelle du projet | Idée, Étude, Opération |
 | phaseStatut | string | Statut actuel de la phase | En cours, En retard, En pause, etc. |
 | programme | string | Programme ou service d'origine | CRTE |
@@ -24,7 +24,7 @@ Un projet de transition écologique est caractérisé par les informations suiva
 | porteurReferentPrenom | string | Prénom du référent | Marie |
 | porteurReferentNom | string | Nom du référent | Dupont |
 | porteurReferentFonction | string | Fonction du référent | Directrice des services techniques |
-| competences | array | Liste des compétences | ["Enseignement du premier degré", "Santé"] |
+| competences | array | Liste des compétences | ["90-21", "90-413"] |
 | leviers | array | Liste des leviers de transition écologique | ["Rénovation (hors changement chaudières)", "Electricité renouvelable"] |
 | mecId | string | Identifiant sur MEC | MEC-7652 |
 | tetId | string | Identifiant sur TET | 12345 |
