@@ -1,6 +1,6 @@
 # Changelog
-Ce fichier répertorie les changements entre différentes versions d'un schéma.
 
-Version 0.0.1 du 2024-01-01
-
-first version
+## 0.1.0 (2025-04-15)
+- Initial version with schema for projects and collectivities
+- Structure using dedicated folders for each entity (projets and collectivites)
+- Example CSV files for both entities

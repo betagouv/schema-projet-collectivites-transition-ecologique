@@ -1,0 +1,491 @@
+{
+    "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
+    "name": "projets",
+    "title": "Projets de transition écologique",
+    "description": "Schéma de données pour décrire un projet de collectivité visant la transition écologique, incluant les informations de suivi, le budget, le statut, les détails du porteur et les référentiels de compétences et leviers.",
+    "keywords": [
+       "transition écologique",
+       "collectivité",
+       "projet",
+       "leviers",
+       "compétences"
+    ],
+    "countryCode": "FR",
+    "homepage": "https://beta.gouv.fr/startups/communs-de-la-transition-ecologique-des-collectivites.html",
+    "path": "https://github.com/betagouv/communs-de-la-transition-ecologique-des-collectivites/tree/main/schema-projet-collectivites-transition-ecologique",
+    "licenses": [
+       {
+          "title": "Licence Ouverte",
+          "name": "etalab-2.0",
+          "path": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
+       }
+    ],
+    "created": "2025-04-15",
+    "lastModified": "2025-04-15",
+    "version": "0.1.0",
+    "contributors": [
+       {
+          "title": "Adrien Zemour",
+          "email": "adrien.zemour@ebeta.gouv.fr",
+          "organisation": "Les communs de la transition écologique des collectivités",
+          "role": "author"
+       },
+       {
+          "title": "Jean Perret",
+          "email": "jean.perret@ebeta.gouv.fr",
+          "organisation": "Les communs de la transition écologique des collectivités",
+          "role": "author"
+       },
+       {
+          "title": "Louis Boivin",
+          "email": "louis.boivin@ebeta.gouv.fr",
+          "organisation": "Les communs de la transition écologique des collectivités",
+          "role": "author"
+       },
+       {
+          "title": "Matthieu Veillon",
+          "email": "matthieu.veillon@ebeta.gouv.fr",
+          "organisation": "Les communs de la transition écologique des collectivités",
+          "role": "author"
+       }
+    ],
+    "fields": [
+       {
+          "name": "id",
+          "title": "Identifiant",
+          "description": "Identifiant unique du projet (UUID).",
+          "example": "01890e30-5a80-7c22-9842-8263d0d0d890",
+          "type": "string",
+          "format": "uuid",
+          "constraints": {
+             "required": true
+          }
+       },
+       {
+          "name": "createdAt",
+          "title": "Date de création",
+          "description": "Date de création du projet.",
+          "example": "2025-04-15T14:30:00.000Z",
+          "type": "datetime",
+          "format": "iso8601",
+          "constraints": {
+             "required": true
+          }
+       },
+       {
+          "name": "updatedAt",
+          "title": "Date de mise à jour",
+          "description": "Date de dernière mise à jour du projet.",
+          "example": "2025-04-15T14:30:00.000Z",
+          "type": "datetime",
+          "format": "iso8601",
+          "constraints": {
+             "required": true
+          }
+       },
+       {
+          "name": "nom",
+          "title": "Nom du projet",
+          "description": "Nom du projet.",
+          "example": "Rénovation énergétique des bâtiments publics",
+          "type": "string",
+          "constraints": {
+             "required": true
+          }
+       },
+       {
+          "name": "description",
+          "title": "Description",
+          "description": "Description détaillée du projet.",
+          "example": "Projet de rénovation énergétique des écoles et bâtiments administratifs pour réduire la consommation d'énergie et améliorer le confort thermique.",
+          "type": "string"
+       },
+       {
+          "name": "budgetPrevisionnel",
+          "title": "Budget prévisionnel",
+          "description": "Budget prévisionnel alloué au projet en euros.",
+          "example": 450000,
+          "type": "integer"
+       },
+       {
+          "name": "dateDebutPrevisionnelle",
+          "title": "Date de début prévisionnelle",
+          "description": "Date prévue de début du projet au format YYYY-MM-DD.",
+          "example": "2025-03-01",
+          "type": "string"
+       },
+       {
+          "name": "phase",
+          "title": "Phase du projet",
+          "description": "Phase actuelle du projet.",
+          "example": "Idée",
+          "type": "string",
+          "constraints": {
+             "enum": [
+                "Idée",
+                "Étude",
+                "Opération"
+             ]
+          }
+       },
+       {
+          "name": "phaseStatut",
+          "title": "Statut de la phase",
+          "description": "Statut actuel de la phase en cours.",
+          "example": "En cours",
+          "type": "string",
+          "constraints": {
+             "enum": [
+                "En cours",
+                "En retard",
+                "En pause",
+                "Bloqué",
+                "Abandonné",
+                "Terminé"
+             ]
+          }
+       },
+       {
+          "name": "programme",
+          "title": "Programme",
+          "description": "Programme ou service numérique à l'origine du projet.",
+          "example": "CRTE",
+          "type": "string"
+       },
+       {
+          "name": "porteurCodeSiret",
+          "title": "SIRET du porteur",
+          "description": "Code SIRET du porteur du projet.",
+          "example": "21690123400019",
+          "type": "string",
+          "constraints": {
+             "pattern": "^\\d{14}$"
+          }
+       },
+       {
+          "name": "porteurReferentEmail",
+          "title": "Email du référent",
+          "description": "Adresse email du référent porteur.",
+          "example": "marie.dupont@ville-exemple.fr",
+          "type": "string",
+          "format": "email"
+       },
+       {
+          "name": "porteurReferentTelephone",
+          "title": "Téléphone du référent",
+          "description": "Numéro de téléphone du référent porteur.",
+          "example": "0472123456",
+          "type": "string"
+       },
+       {
+          "name": "porteurReferentPrenom",
+          "title": "Prénom du référent",
+          "description": "Prénom du référent porteur.",
+          "example": "Marie",
+          "type": "string"
+       },
+       {
+          "name": "porteurReferentNom",
+          "title": "Nom du référent",
+          "description": "Nom du référent porteur.",
+          "example": "Dupont",
+          "type": "string"
+       },
+       {
+          "name": "porteurReferentFonction",
+          "title": "Fonction du référent",
+          "description": "Fonction du référent porteur.",
+          "example": "Directrice des services techniques",
+          "type": "string"
+       },
+       {
+          "name": "competences",
+          "title": "Compétences",
+          "description": "Liste des codes de compétences associées au projet selon le référentiel M57. Le référentiel de correspondance entre les codes et les libellés est disponible dans un fichier séparé.",
+          "type": "array",
+          "arrayItem": {
+             "type": "string",
+             "constraints": {
+                "enum": [
+                   "90-025",
+                   "90-11",
+                   "90-12",
+                   "90-13",
+                   "90-18",
+                   "90-21",
+                   "90-211",
+                   "90-212",
+                   "90-213",
+                   "90-22",
+                   "90-221",
+                   "90-222",
+                   "90-223",
+                   "90-23",
+                   "90-24",
+                   "90-25",
+                   "90-251",
+                   "90-252",
+                   "90-253",
+                   "90-254",
+                   "90-255",
+                   "90-256",
+                   "90-26",
+                   "90-27",
+                   "90-28",
+                   "90-281",
+                   "90-282",
+                   "90-283",
+                   "90-284",
+                   "90-288",
+                   "90-29",
+                   "90-31",
+                   "90-311",
+                   "90-312",
+                   "90-313",
+                   "90-314",
+                   "90-315",
+                   "90-316",
+                   "90-317",
+                   "90-318",
+                   "90-32",
+                   "90-321",
+                   "90-322",
+                   "90-323",
+                   "90-324",
+                   "90-325",
+                   "90-326",
+                   "90-327",
+                   "90-33",
+                   "90-331",
+                   "90-332",
+                   "90-338",
+                   "90-34",
+                   "90-341",
+                   "90-348",
+                   "90-39",
+                   "90-41",
+                   "90-411",
+                   "90-412",
+                   "90-413",
+                   "90-414",
+                   "90-418",
+                   "90-42",
+                   "90-421",
+                   "90-422",
+                   "90-423",
+                   "90-424",
+                   "90-425",
+                   "90-428",
+                   "90-51",
+                   "90-511",
+                   "90-512",
+                   "90-513",
+                   "90-514",
+                   "90-515",
+                   "90-518",
+                   "90-52",
+                   "90-53",
+                   "90-54",
+                   "90-55",
+                   "90-551",
+                   "90-552",
+                   "90-553",
+                   "90-554",
+                   "90-555",
+                   "90-56",
+                   "90-57",
+                   "90-58",
+                   "90-581",
+                   "90-588",
+                   "90-59",
+                   "90-61",
+                   "90-62",
+                   "90-63",
+                   "90-631",
+                   "90-632",
+                   "90-633",
+                   "90-64",
+                   "90-65",
+                   "90-66",
+                   "90-67",
+                   "90-68",
+                   "90-71",
+                   "90-72",
+                   "90-721",
+                   "90-722",
+                   "90-73",
+                   "90-731",
+                   "90-732",
+                   "90-733",
+                   "90-734",
+                   "90-735",
+                   "90-74",
+                   "90-75",
+                   "90-751",
+                   "90-752",
+                   "90-753",
+                   "90-754",
+                   "90-758",
+                   "90-76",
+                   "90-77",
+                   "90-78",
+                   "90-81",
+                   "90-82",
+                   "90-821",
+                   "90-822",
+                   "90-823",
+                   "90-824",
+                   "90-825",
+                   "90-828",
+                   "90-83",
+                   "90-831",
+                   "90-832",
+                   "90-833",
+                   "90-834",
+                   "90-835",
+                   "90-838",
+                   "90-84",
+                   "90-841",
+                   "90-842",
+                   "90-843",
+                   "90-844",
+                   "90-845",
+                   "90-846",
+                   "90-847",
+                   "90-848",
+                   "90-849",
+                   "90-85",
+                   "90-851",
+                   "90-852",
+                   "90-853",
+                   "90-854",
+                   "90-855",
+                   "90-86",
+                   "90-87",
+                   "90-89"
+                ]
+             }
+          },
+          "example": ["90-21", "90-413"]
+       },
+       {
+          "name": "leviers",
+          "title": "Leviers",
+          "description": "Liste des leviers de la transition écologique associés au projet.",
+          "type": "array",
+          "arrayItem": {
+             "type": "string",
+             "constraints": {
+                "enum": [
+                   "Gestion des forêts et produits bois",
+                   "Changements de pratiques de fertilisation azotée",
+                   "Elevage durable",
+                   "Gestion des haies",
+                   "Bâtiments & Machines agricoles",
+                   "Gestion des prairies",
+                   "Pratiques stockantes",
+                   "Sobriété foncière",
+                   "Surface en aire protégée",
+                   "Résorption des points noirs prioritaires de continuité écologique",
+                   "Restauration des habitats naturels",
+                   "Réduction de l'usage des produits phytosanitaires",
+                   "Développement de l'agriculture biologique et de HVE",
+                   "Respect d'Egalim pour la restauration collective",
+                   "Sobriété des bâtiments (résidentiel)",
+                   "Changement chaudières fioul + rénovation (résidentiel)",
+                   "Changement chaudières gaz + rénovation (résidentiel)",
+                   "Rénovation (hors changement chaudières)",
+                   "Sobriété des bâtiments (tertiaire)",
+                   "Changement chaudières fioul + rénovation (tertiaire)",
+                   "Changement chaudières gaz + rénovation (tertiaire)",
+                   "Gaz fluorés résidentiel",
+                   "Gaz fluorés tertiaire",
+                   "Captage de méthane dans les ISDND",
+                   "Prévention des déchets",
+                   "Valorisation matière des déchets",
+                   "Moindre stockage en décharge",
+                   "Augmentation du taux de collecte",
+                   "Sobriété dans l'utilisation de la ressource en eau",
+                   "Protection des zones de captage d'eau",
+                   "Désimperméabilisation des sols",
+                   "Electricité renouvelable",
+                   "Biogaz",
+                   "Réseaux de chaleur décarbonés",
+                   "Top 50 sites industriels",
+                   "Industrie diffuse",
+                   "Fret décarboné et multimodalité",
+                   "Efficacité et sobriété logistique",
+                   "Réduction des déplacements",
+                   "Covoiturage",
+                   "Vélo",
+                   "Transports en commun",
+                   "Véhicules électriques",
+                   "Efficacité énergétique des véhicules privés",
+                   "Bus et cars décarbonés",
+                   "2 roues (élec&efficacité)",
+                   "Nucléaire",
+                   "Bio-carburants",
+                   "Efficacité des aéronefs",
+                   "SAF"
+                ]
+             }
+          },
+          "example": ["Rénovation (hors changement chaudières)", "Electricité renouvelable"]
+       },
+       {
+          "name": "mecId",
+          "title": "ID MEC",
+          "description": "Identifiant du projet sur Mon Espace Collectivité.",
+          "example": "MEC-7652",
+          "type": "string"
+       },
+       {
+          "name": "tetId",
+          "title": "ID TET",
+          "description": "Identifiant du projet sur TET.",
+          "example": "12345",
+          "type": "string"
+       },
+       {
+          "name": "recocoId",
+          "title": "ID Recoco",
+          "description": "Identifiant du projet sur Recoco.",
+          "type": "string"
+       },
+       {
+          "name": "collectiviteIds",
+          "title": "IDs des collectivités",
+          "description": "Identifiants des collectivités associées au projet.",
+          "type": "array",
+          "arrayItem": {
+             "type": "string",
+             "format": "uuid"
+          },
+          "example": ["01890e30-5a80-7c22-9842-8263d0d0d123"]
+       }
+    ],
+    "foreignKeys": [
+       {
+          "fields": ["collectiviteIds"],
+          "reference": {
+             "resource": "collectivites",
+             "fields": ["id"]
+          },
+          "description": "Cette clé étrangère relie un tableau d'identifiants à la table collectivites. Pour l'implémentation, chaque valeur du tableau doit correspondre à un ID valide dans la table collectivites."
+       }
+    ],
+    "missingValues": [""],
+    "primaryKey": "id",
+    "references": [
+       {
+          "title": "Référentiel des compétences M57",
+          "path": "https://github.com/betagouv/communs-de-la-transition-ecologique-des-collectivites/blob/main/api/src/shared/const/competences-list.ts",
+          "description": "Le référentiel des compétences M57 contient les correspondances entre les codes et les libellés des compétences. Ci-dessous un extrait des correspondances :\n\n```\n\"90-21\": \"Enseignement du premier degré\"\n\"90-41\": \"Santé\"\n\"90-511\": \"Aménagement et services urbains > Espaces verts urbains\"\n\"90-84\": \"Voirie\"\n```\n\nPour le référentiel complet, veuillez consulter le fichier de référence."
+       },
+       {
+          "title": "Référentiel des leviers",
+          "path": "https://github.com/betagouv/communs-de-la-transition-ecologique-des-collectivites/blob/main/api/src/shared/const/leviers.ts",
+          "description": "Le référentiel des leviers contient la liste des leviers d'action de transition écologique disponibles pour les projets. Ces leviers sont organisés par domaine d'action environnementale et correspondent aux priorités nationales pour la transition écologique des territoires."
+       }
+    ]
+ }

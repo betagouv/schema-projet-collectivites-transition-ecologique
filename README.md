@@ -1,35 +1,38 @@
-# Template de départ pour Data Package
+# Schéma des projets de transition écologique des collectivités
 
-Ce dépôt contient les fichiers nécessaires pour démarrer la création d'un dépôt pour un schéma [Data Package](https://specs.frictionlessdata.io/data-package/).
+Ce dépôt contient les schémas de données standardisés pour décrire les projets de transition écologique menés par les collectivités territoriales françaises.
 
-## Utiliser ce template
+## Vue d'ensemble
 
-- Si vous créez votre dépôt sur GitHub, il vous suffit d'appuyer sur le bouton vert "Use this template". Consultez [la documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) pour plus d'infos ;
-- Si votre projet sera hébergé ailleurs (par exemple Gitlab), vous pouvez cloner ce répertoire ou télécharger les fichiers correspondants. Utilisez le bouton "Clone or download".
+Ce schéma permet de structurer les données relatives aux projets de collectivités en lien avec la transition écologique. Il facilite le partage, l'analyse et la valorisation de ces données entre différents services numériques de l'État français et les collectivités territoriales.
 
-## Fichiers disponibles
+## Structure du schéma
 
-Ce dépôt contient un ensemble de fichiers utiles pour un dépôt d'un schéma [Data Package](https://specs.frictionlessdata.io/data-package/).
+Le schéma est organisé en deux tables principales :
 
-- [`CHANGELOG.md`](CHANGELOG.md) contient la liste des changements entre les différentes versions de votre schéma ;
-- [`LICENSE.md`](LICENSE.md) est le fichier de licence du dépôt. Nous recommandons d'utiliser la [Licence Ouverte](https://www.etalab.gouv.fr/licence-ouverte-open-licence), cette licence est recommandée par l'administration française pour le partage de données et de documents ;
-- [`README.md`](README.md) est le fichier que vous lisez actuellement. À terme, il devra présenter votre schéma ;
-- [`requirements.txt`](requirements.txt) liste les dépendances Python nécessaires pour effectuer des tests en intégration continue sur votre dépôt ;
-- [`datapackage.json`](datapackage.json) est le schéma au format Data Package qui fait référence à deux tables contenues dans les dossiers `table1` et `table2`.
+1. **Projets** : Décrit les projets de transition écologique avec leurs caractéristiques (identifiant, nom, description, budget, planning, phase, etc.)
+2. **Collectivités** : Décrit les collectivités territoriales (communes, EPCI) qui portent ces projets
 
-### Intégration continue
+Ces tables sont liées par une relation many-to-many, ce qui permet à un projet d'être associé à plusieurs collectivités et vice-versa.
 
-Ce dépôt est configuré pour utiliser de l'intégration continue, si vous utilisez GitHub. À chaque commit, une suite de tests sera lancée via [GitHub Actions](https://github.com/features/actions) afin de vérifier :
+## Utilisation
 
-- que votre schéma est valide à la spécification Data Package ;
-- que vos fichiers d'exemples sont conformes au schéma.
+Ces schémas sont conçus pour être utilisés par différents services numériques qui accompagnent les collectivités dans leurs projets de transition écologique, comme :
 
-Si vous n'utilisez pas GitHub, vous pouvez lancer ces tests sur votre machine ou sur un autre service d'intégration continue comme Gitlab CI, Jenkins, Circle CI, Travis etc. Consultez la configuration utilisée dans [`.github/workflows/test.yml`](.github/workflows/test.yml).
+- Mon Espace Collectivité (MEC)
+- Territoires Engagés pour la Transition Écologique (TET)
+- Recoco
 
+## Format
 
-## Documentation
+Les schémas sont au format [Table Schema](https://specs.frictionlessdata.io/table-schema/) et [Data Package](https://specs.frictionlessdata.io/data-package/), conforme aux spécifications Frictionless Data, pour faciliter la validation et l'interopérabilité des données.
 
-Pour vous aider dans la construction de votre dépôt, nous vous recommandons de vous référer à :
+## Contenu du dépôt
 
-- [Le guide à destination des producteurs de schéma](https://guides.data.gouv.fr/guides-open-data/guide-qualite)
-- [La documentation de schema.data.gouv.fr](https://schema.data.gouv.fr)
+- `datapackage.json` : Le descripteur principal du package de données
+- `projets/` : Contient le schéma et les exemples pour la table des projets
+- `collectivites/` : Contient le schéma et les exemples pour la table des collectivités
+
+## Licence
+
+Les schémas et la documentation sont sous [Licence Ouverte Etalab 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/).
