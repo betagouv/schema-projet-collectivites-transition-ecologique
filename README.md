@@ -24,7 +24,7 @@ Ces référentiels sont utilisés pour catégoriser et standardiser les données
 
 ## Relations
 
-- Les tables principales sont liées par une relation many-to-many
+- Les tables principales : `projets-transition-ecologique/` et `collectivites/`   sont liées par une relation many-to-many
 - Les projets font référence aux référentiels via :
   - Le champ `competences` qui pointe vers le référentiel M57 des compétences et sous-compétences des collectivités
   - Le champ `leviers` qui pointe vers le référentiel des leviers SGPE de la Plannification Ecologique.

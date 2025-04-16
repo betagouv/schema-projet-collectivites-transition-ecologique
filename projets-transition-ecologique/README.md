@@ -2,21 +2,6 @@
 
 Ce schéma permet de décrire les projets de transition écologique menés par les collectivités territoriales françaises.
 
-## Phases et statuts
-
-Les projets peuvent être dans une des phases suivantes :
-- **Idée** : Le projet est au stade d'idéation ou de concept
-- **Étude** : Le projet est en phase d'étude (faisabilité, conception, etc.)
-- **Opération** : Le projet est en phase de réalisation concrète
-
-Les statuts possibles pour chaque phase sont :
-- **En cours** : La phase progresse normalement
-- **En retard** : La phase prend du retard sur le planning initial
-- **En pause** : La phase est temporairement mise en pause
-- **Bloqué** : La phase est bloquée par un obstacle
-- **Abandonné** : Le projet a été abandonné
-- **Terminé** : La phase est terminée
-
 ## Compétences et leviers
 
 Les champs `competences` et `leviers` permettent de catégoriser les projets selon :
