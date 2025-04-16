@@ -3,8 +3,8 @@
 ## 0.1.1 (2025-04-16)
 ### Améliorations
 - Ajout des référentiels comme ressources dans le data package
-  - Référentiel des compétences M57 (JSON)
-  - Référentiel des leviers de transition écologique (CSV)
+  - Référentiel des compétences des collectivités M57 (JSON)
+  - Référentiel des leviers SGPE de la transition écologique (CSV)
 - Mise à jour des schémas pour utiliser les référentiels
   - Suppression des enums hardcodés
   - Ajout des foreign keys appropriées
