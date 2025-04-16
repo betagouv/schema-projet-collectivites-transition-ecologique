@@ -21,11 +21,11 @@ jobs:
           ${{ runner.os }}-
     - name: Installation des dépendances
       run: pip install -r requirements.txt
-    - name: Vérification du schéma projets et des fichiers d'exemples associés
+    - name: Vérification du schéma projets-transition-ecologique et des fichiers d'exemples associés
       run: |
-        frictionless validate --type schema projets/schema.json
-        frictionless validate --schema projets/schema.json projets/exemple-valide.csv
-    - name: Vérification du schéma table2 et des fichiers d'exemples associés
+        frictionless validate --type schema projets-transition-ecologique/schema.json
+        frictionless validate --schema projets-transition-ecologique/schema.json projets-transition-ecologique/exemple-valide.csv
+    - name: Vérification du schéma collectivites et des fichiers d'exemples associés
       run: |
         frictionless validate --type schema collectivites/schema.json
         frictionless validate --schema collectivites/schema.json collectivites/exemple-valide.csv
