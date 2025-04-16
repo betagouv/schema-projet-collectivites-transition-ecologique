@@ -31,11 +31,12 @@ Ces référentiels sont utilisés pour catégoriser et standardiser les données
 
 ## Utilisation
 
-Ces schémas sont conçus pour être utilisés par différents services numériques qui accompagnent les collectivités dans leurs projets de transition écologique, comme :
+Ces schémas sont conçus pour être utilisés par tout service numérique qui accompagne les collectivités dans leurs projets de transition écologique, comme par exemple :
 
 - Mon Espace Collectivité (MEC)
 - Territoires Engagés pour la Transition Écologique (TET)
-- Recoco
+- Recommandations Collaboratives (Recoco)
+- etc.
 
 ## Format
 

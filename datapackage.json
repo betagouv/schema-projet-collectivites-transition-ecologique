@@ -49,15 +49,15 @@
     "version": "v0.1.1",
     "resources": [
         {
-            "name": "projets",
-            "title": "Projets de transition écologique",
+            "name": "projets-territoire",
+            "title": "Projets de collectivité",
             "description": "Description des projets de transition écologique menés par les collectivités",
-            "path": "projets/exemple-valide.csv",
+            "path": "projets-territoire/exemple-valide.csv",
             "profile": "tabular-data-resource",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "projets/schema.json"
+            "schema": "projets-territoire/schema.json"
         },
         {
             "name": "collectivites",
