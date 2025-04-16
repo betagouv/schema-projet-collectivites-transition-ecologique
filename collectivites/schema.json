@@ -10,8 +10,8 @@
        "transition écologique"
     ],
     "countryCode": "FR",
-    "homepage": "https://beta.gouv.fr/startups/communs-de-la-transition-ecologique-des-collectivites.html",
-    "path": "https://github.com/betagouv/communs-de-la-transition-ecologique-des-collectivites/tree/main/schema-projet-collectivites-transition-ecologique",
+    "homepage": "https://github.com/betagouv/communs-de-la-transition-ecologique-des-collectivites/tree/main/schema-projet-collectivites-transition-ecologique",
+    "path": "https://github.com/betagouv/communs-de-la-transition-ecologique-des-collectivites/tree/main/schema-projet-collectivites-transition-ecologique/collectivites/schema.json",
     "licenses": [
        {
           "title": "Licence Ouverte",
@@ -20,8 +20,8 @@
        }
     ],
     "created": "2025-04-15",
-    "lastModified": "2025-04-15",
-    "version": "0.1.0",
+    "lastModified": "2025-04-16",
+    "version":  "v0.1.1",
     "contributors": [
        {
           "title": "Adrien Zemour",

@@ -8,12 +8,26 @@ Ce schéma permet de structurer les données relatives aux projets de collectivi
 
 ## Structure du schéma
 
-Le schéma est organisé en deux tables principales :
+Le schéma est organisé en deux tables principales et deux référentiels :
+
+### Tables principales
 
 1. **Projets** : Décrit les projets de transition écologique avec leurs caractéristiques (identifiant, nom, description, budget, planning, phase, etc.)
 2. **Collectivités** : Décrit les collectivités territoriales (communes, EPCI) qui portent ces projets
 
-Ces tables sont liées par une relation many-to-many, ce qui permet à un projet d'être associé à plusieurs collectivités et vice-versa.
+### Référentiels
+
+1. **Référentiel des compétences M57** : Liste hiérarchique des compétences et sous-compétences des collectivités selon la nomenclature M57
+2. **Référentiel des leviers de transition écologique** : Liste des leviers d'action disponibles pour les projets de transition écologique
+
+Ces référentiels sont utilisés pour catégoriser et standardiser les données des projets.
+
+## Relations
+
+- Les tables principales sont liées par une relation many-to-many
+- Les projets font référence aux référentiels via :
+  - Le champ `competences` qui pointe vers le référentiel M57 des compétences et sous-compétences des collectivités
+  - Le champ `leviers` qui pointe vers le référentiel des leviers SGPE de la Plannification Ecologique.
 
 ## Utilisation
 
@@ -30,8 +44,11 @@ Les schémas sont au format [Table Schema](https://specs.frictionlessdata.io/tab
 ## Contenu du dépôt
 
 - `datapackage.json` : Le descripteur principal du package de données
-- `projets/` : Contient le schéma et les exemples pour la table des projets
+- `projets-transition-ecologique/` : Contient le schéma et les exemples pour la table des projets
 - `collectivites/` : Contient le schéma et les exemples pour la table des collectivités
+- `reference-data/` : Contient les référentiels :
+  - `competences-collectivites.json` : Référentiel M57 des compétences / sous-compétencec
+  - `50_leviers_SGPE_03_2025.csv` : Référentiel des leviers SGPE de la plannification écologique
 
 ## Licence
 

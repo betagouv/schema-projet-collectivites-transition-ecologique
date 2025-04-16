@@ -44,9 +44,9 @@
             "role": "author"
         }
     ],
-    "homepage": "https://beta.gouv.fr/startups/communs-de-la-transition-ecologique-des-collectivites.html",
+    "homepage": "https://github.com/betagouv/schema-projet-collectivites-transition-ecologique/",
     "created": "2025-04-15",
-    "version": "0.1.0",
+    "version": "v0.1.1",
     "resources": [
         {
             "name": "projets",
@@ -69,6 +69,47 @@
             "mediatype": "text/csv",
             "encoding": "utf-8",
             "schema": "collectivites/schema.json"
-        }
+        },
+        {
+            "name": "referentiel-leviers-TE",
+            "path": "reference-data/50_leviers_SGPE_03_2025.csv",
+            "schema": {
+              "fields": [
+                {
+                  "name": "levier",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "referentiel-competences-m57",
+            "path": "reference-data/competences-collectivites.json",
+            "format": "json",
+            "mediatype": "application/json",
+            "schema": {
+              "fields": [
+                {
+                  "name": "code",
+                  "type": "string"
+                },
+                {
+                  "name": "nom",
+                  "type": "string"
+                },
+                {
+                  "name": "sous_competences",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "code": { "type": "string" },
+                      "nom": { "type": "string" }
+                    }
+                  }
+                }
+              ]
+            }
+          }
     ]
 }
