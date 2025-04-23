@@ -1,4 +1,8 @@
 {
+    "name": "schema-competences-m57",
+    "title": "Schéma des compétences M57",
+    "description": "Schéma décrivant les compétences selon la nomenclature M57",
+    "version": "0.1.1",
     "fields": [
         {
             "name": "code",

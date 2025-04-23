@@ -1,4 +1,8 @@
 {
+    "name": "schema-leviers-sgpe",
+    "title": "Schéma des leviers SGPE",
+    "description": "Schéma décrivant les leviers d'action du SGPE",
+    "version": "0.1.1",
     "fields": [
         {
             "name": "levier",
