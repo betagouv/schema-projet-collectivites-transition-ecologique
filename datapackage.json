@@ -230,27 +230,97 @@
             "name": "collectivites",
             "title": "Collectivités",
             "description": "Description des collectivités territoriales porteuses de projets de transition écologique",
-            "path": "collectivites/exemple-valide.csv",
             "profile": "tabular-data-resource",
+            "path": "collectivites/exemple-valide.csv",
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "dialect": {
-                "delimiter": ",",
-                "header": true
-            },
             "schema": {
                 "fields": [
                     {
                         "name": "id",
                         "type": "string",
                         "format": "uuid",
+                        "title": "Identifiant",
+                        "description": "Identifiant unique de la collectivité",
                         "constraints": {
                             "required": true
                         }
+                    },
+                    {
+                        "name": "nom",
+                        "type": "string",
+                        "title": "Nom",
+                        "description": "Nom de la collectivité",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "title": "Type",
+                        "description": "Type de collectivité (Commune, EPCI, Département, Région)",
+                        "constraints": {
+                            "enum": ["Commune", "EPCI", "Département", "Région"]
+                        }
+                    },
+                    {
+                        "name": "codeInsee",
+                        "type": "string",
+                        "title": "Code INSEE",
+                        "description": "Code INSEE de la commune"
+                    },
+                    {
+                        "name": "codeDepartements",
+                        "type": "array",
+                        "title": "Codes départements",
+                        "description": "Liste des codes départements",
+                        "arrayItem": {
+                            "type": "string",
+                            "pattern": "^[0-9]{2,3}$"
+                        }
+                    },
+                    {
+                        "name": "codeRegions",
+                        "type": "array",
+                        "title": "Codes régions",
+                        "description": "Liste des codes régions",
+                        "arrayItem": {
+                            "type": "string",
+                            "pattern": "^[0-9]{2}$"
+                        }
+                    },
+                    {
+                        "name": "codeEpci",
+                        "type": "string",
+                        "title": "Code EPCI",
+                        "description": "Code de l'établissement public de coopération intercommunale"
+                    },
+                    {
+                        "name": "siren",
+                        "type": "string",
+                        "title": "SIREN",
+                        "description": "Numéro SIREN de la collectivité",
+                        "constraints": {
+                            "pattern": "^[0-9]{9}$"
+                        }
+                    },
+                    {
+                        "name": "createdAt",
+                        "type": "datetime",
+                        "title": "Date de création",
+                        "description": "Date de création de l'enregistrement"
+                    },
+                    {
+                        "name": "updatedAt",
+                        "type": "datetime",
+                        "title": "Date de mise à jour",
+                        "description": "Date de dernière modification de l'enregistrement"
                     }
                 ],
-                "primaryKey": "id"
+                "primaryKey": "id",
+                "missingValues": [""]
             }
         },
         {
