@@ -57,10 +57,53 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "projets-territoire/schema.json",
             "dialect": {
                 "delimiter": ",",
                 "header": true
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "format": "uuid",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "competences",
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "constraints": {
+                                "pattern": "^90-[0-9]{2,3}$"
+                            }
+                        },
+                        "foreignKey": {
+                            "fields": "competences",
+                            "reference": {
+                                "resource": "referentiel-competences-m57",
+                                "fields": "code"
+                            }
+                        }
+                    },
+                    {
+                        "name": "leviers",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "foreignKey": {
+                            "fields": "leviers",
+                            "reference": {
+                                "resource": "referentiel-leviers-sgpe",
+                                "fields": "levier"
+                            }
+                        }
+                    }
+                ],
+                "primaryKey": "id"
             }
         },
         {
@@ -72,10 +115,22 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "collectivites/schema.json",
             "dialect": {
                 "delimiter": ",",
                 "header": true
+            },
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "format": "uuid",
+                        "constraints": {
+                            "required": true
+                        }
+                    }
+                ],
+                "primaryKey": "id"
             }
         },
         {
@@ -85,6 +140,10 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
+            "dialect": {
+                "delimiter": ",",
+                "header": true
+            },
             "schema": {
                 "fields": [
                     {
@@ -93,10 +152,6 @@
                     }
                 ],
                 "primaryKey": "levier"
-            },
-            "dialect": {
-                "delimiter": ",",
-                "header": true
             }
         },
         {
@@ -108,6 +163,10 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
+            "dialect": {
+                "delimiter": ",",
+                "header": true
+            },
             "schema": {
                 "fields": [
                     {
@@ -124,10 +183,6 @@
                     }
                 ],
                 "primaryKey": "code"
-            },
-            "dialect": {
-                "delimiter": ",",
-                "header": true
             }
         }
     ]
