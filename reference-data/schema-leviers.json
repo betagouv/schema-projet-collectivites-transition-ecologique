@@ -1,0 +1,12 @@
+{
+    "fields": [
+        {
+            "name": "levier",
+            "type": "string",
+            "title": "Levier",
+            "description": "Nom du levier d'action"
+        }
+    ],
+    "primaryKey": "levier",
+    "missingValues": [""]
+} 
