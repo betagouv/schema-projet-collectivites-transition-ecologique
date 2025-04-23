@@ -43,8 +43,11 @@ elif "datapackage.json" in os.listdir():
     with open("datapackage.json", "r") as f:
         datapackage = json.load(f)
     for r in datapackage["resources"]:
-        if isinstance(r["schema"], str):  # Only add if schema is a path
-            to_check.append(r["schema"])
+        if "schema" in r:
+            if isinstance(r["schema"], str):  # Schema is a path
+                to_check.append(r["schema"])
+            elif isinstance(r["schema"], dict):  # Inline schema
+                continue  # Skip inline schemas as they don't have versions
 
 else:
     raise Exception("No required file found")
