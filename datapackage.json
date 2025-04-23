@@ -3,7 +3,7 @@
     "title": "Schéma des projets de transition écologique des collectivités",
     "description": "Modèle de données pour décrire les projets de transition écologique menés par les collectivités territoriales, incluant les informations sur les projets et les collectivités associées.",
     "id": "schema-projet-collectivites-transition-ecologique",
-    "profile": "data-package",
+    "profile": "tabular-data-package",
     "licenses": [
         {
             "title": "Licence Ouverte",
@@ -57,7 +57,11 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "projets-territoire/schema.json"
+            "schema": "projets-territoire/schema.json",
+            "dialect": {
+                "delimiter": ",",
+                "header": true
+            }
         },
         {
             "name": "collectivites",
@@ -68,7 +72,11 @@
             "format": "csv",
             "mediatype": "text/csv",
             "encoding": "utf-8",
-            "schema": "collectivites/schema.json"
+            "schema": "collectivites/schema.json",
+            "dialect": {
+                "delimiter": ",",
+                "header": true
+            }
         },
         {
             "name": "referentiel-leviers-sgpe",
@@ -83,7 +91,12 @@
                         "name": "levier",
                         "type": "string"
                     }
-                ]
+                ],
+                "primaryKey": "levier"
+            },
+            "dialect": {
+                "delimiter": ",",
+                "header": true
             }
         },
         {
@@ -109,7 +122,12 @@
                         "type": "string",
                         "description": "Libellé de la compétence ou sous-compétence"
                     }
-                ]
+                ],
+                "primaryKey": "code"
+            },
+            "dialect": {
+                "delimiter": ",",
+                "header": true
             }
         }
     ]
