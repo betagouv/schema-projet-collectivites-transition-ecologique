@@ -223,15 +223,18 @@
           "title": "Leviers",
           "description": "Liste des leviers de la transition écologique associés au projet.",
           "type": "array",
-          "arrayItem": {
-             "type": "string",
-             "constraints": {
-                "enum": {
+          "items": {
+             "type": "string"
+          },
+          "foreignKeys": [
+             {
+                "fields": "leviers",
+                "reference": {
                    "resource": "referentiel-leviers-TE",
-                   "field": "levier"
+                   "fields": ["levier"]
                 }
              }
-          },
+          ],
           "examples": ["Rénovation (hors changement chaudières)", "Electricité renouvelable"]
        },
        {
