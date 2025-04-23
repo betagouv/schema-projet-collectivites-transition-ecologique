@@ -203,13 +203,17 @@
           "title": "Compétences",
           "description": "Liste des codes de compétences ou sous-compétences associées au projet selon le référentiel M57.",
           "type": "array",
-          "arrayItem": {
+          "items": {
              "type": "string",
              "constraints": {
-                "enum": {
-                   "resource": "referentiel-competences-m57",
-                   "fields": ["code", "sous_competences.code"]
-                }
+                "pattern": "^90-[0-9]{2,3}$"
+             }
+          },
+          "foreignKeys": {
+             "fields": ["competences"],
+             "reference": {
+                "resource": "referentiel-competences-m57",
+                "fields": ["code"]
              }
           },
           "examples": ["90-21", "90-413"]
@@ -283,9 +287,9 @@
           "fields": ["competences"],
           "reference": {
              "resource": "referentiel-competences-m57",
-             "fields": ["code", "sous_competences.code"]
+             "fields": ["code"]
           },
-          "description": "Cette clé étrangère relie les compétences aux codes principaux et sous-codes du référentiel M57."
+          "description": "Cette clé étrangère relie les compétences aux codes principaux du référentiel M57."
        }
     ],
     "missingValues": [""],
