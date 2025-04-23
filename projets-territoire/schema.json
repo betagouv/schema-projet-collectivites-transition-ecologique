@@ -66,8 +66,8 @@
           "title": "Date de création",
           "description": "Date de création du projet.",
           "example": "2025-04-15T14:30:00.000Z",
-          "type": "datetime",
-          "format": "iso8601",
+          "type": "string",
+          "format": "datetime",
           "constraints": {
              "required": true
           }
@@ -77,8 +77,8 @@
           "title": "Date de mise à jour",
           "description": "Date de dernière mise à jour du projet.",
           "example": "2025-04-15T14:30:00.000Z",
-          "type": "datetime",
-          "format": "iso8601",
+          "type": "string",
+          "format": "datetime",
           "constraints": {
              "required": true
           }
