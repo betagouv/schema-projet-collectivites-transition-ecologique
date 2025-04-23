@@ -1,1 +1,2 @@
-frictionless==5.14.0
+frictionless==5.18.0
+frictionless[json]
