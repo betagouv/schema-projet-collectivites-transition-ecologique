@@ -96,12 +96,19 @@
             "schema": {
                 "fields": [
                     {
-                        "name": "competence",
+                        "name": "code",
                         "type": "string"
                     },
                     {
-                        "name": "description",
+                        "name": "nom",
                         "type": "string"
+                    },
+                    {
+                        "name": "sous_competences",
+                        "type": "array",
+                        "constraints": {
+                            "required": false
+                        }
                     }
                 ]
             }
