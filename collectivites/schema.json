@@ -96,7 +96,7 @@
           "title": "Codes départements",
           "description": "Codes des départements de la collectivité.",
           "type": "array",
-          "arrayItem": {
+          "items": {
              "type": "string"
           },
           "examples": ["69", "01"]
@@ -106,7 +106,7 @@
           "title": "Codes régions",
           "description": "Codes des régions de la collectivité.",
           "type": "array",
-          "arrayItem": {
+          "items": {
              "type": "string"
           },
           "examples": ["84", "27"]
@@ -133,10 +133,10 @@
           "title": "Date de création",
           "description": "Date de création de l'entrée.",
           "example": "2025-04-15T14:30:00.000Z",
-          "type": "datetime",
-          "format": "iso8601",
+          "type": "string",
           "constraints": {
-             "required": true
+             "required": true,
+             "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:?\\d{2})$"
           }
        },
        {
@@ -144,10 +144,10 @@
           "title": "Date de mise à jour",
           "description": "Date de dernière mise à jour de l'entrée.",
           "example": "2025-04-15T09:45:12.000Z",
-          "type": "datetime",
-          "format": "iso8601",
+          "type": "string",
           "constraints": {
-             "required": true
+             "required": true,
+             "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:?\\d{2})$"
           }
        }
     ],
