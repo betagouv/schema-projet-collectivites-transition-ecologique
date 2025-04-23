@@ -67,9 +67,9 @@
           "description": "Date de création du projet.",
           "example": "2025-04-15T14:30:00.000Z",
           "type": "string",
-          "format": "datetime",
           "constraints": {
-             "required": true
+             "required": true,
+             "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:?\\d{2})$"
           }
        },
        {
@@ -78,9 +78,9 @@
           "description": "Date de dernière mise à jour du projet.",
           "example": "2025-04-15T14:30:00.000Z",
           "type": "string",
-          "format": "datetime",
           "constraints": {
-             "required": true
+             "required": true,
+             "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:?\\d{2})$"
           }
        },
        {
