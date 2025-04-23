@@ -12,7 +12,7 @@
     ],
     "countryCode": "FR",
     "homepage": "https://github.com/betagouv/communs-de-la-transition-ecologique-des-collectivites/tree/main/schema-projet-collectivites-transition-ecologique",
-    "path": "https://github.com/betagouv/communs-de-la-transition-ecologique-des-collectivites/tree/main/schema-projet-collectivites-transition-ecologique/projets-transition-ecologique/schema.json",
+    "path": "https://github.com/betagouv/communs-de-la-transition-ecologique-des-collectivites/tree/main/schema-projet-collectivites-transition-ecologique/projets-territoire/schema.json",
     "licenses": [
        {
           "title": "Licence Ouverte",
