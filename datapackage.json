@@ -52,29 +52,26 @@
             "name": "projets-territoire",
             "title": "Projets de collectivité",
             "description": "Description des projets de transition écologique menés par les collectivités",
-            "profile": "tabular-data-resource",
             "path": "projets-territoire/exemple-valide.csv",
+            "schema": "projets-territoire/schema.json",
             "format": "csv",
             "mediatype": "text/csv",
-            "encoding": "utf-8",
-            "schema": "projets-territoire/schema.json"
+            "encoding": "utf-8"
         },
         {
             "name": "collectivites",
             "title": "Collectivités",
             "description": "Description des collectivités territoriales porteuses de projets de transition écologique",
-            "profile": "tabular-data-resource",
             "path": "collectivites/exemple-valide.csv",
+            "schema": "collectivites/schema.json",
             "format": "csv",
             "mediatype": "text/csv",
-            "encoding": "utf-8",
-            "schema": "collectivites/schema.json"
+            "encoding": "utf-8"
         },
         {
             "name": "referentiel-leviers-sgpe",
             "title": "Référentiel des leviers SGPE",
             "description": "Liste des leviers d'action possibles",
-            "profile": "tabular-data-resource",
             "path": "reference-data/50_leviers_SGPE_03_2025.csv",
             "format": "csv",
             "mediatype": "text/csv",
@@ -88,14 +85,13 @@
                         "description": "Nom du levier d'action"
                     }
                 ],
-                "primaryKey": "levier"
+                "primaryKey": ["levier"]
             }
         },
         {
             "name": "referentiel-competences-m57",
             "title": "Référentiel des compétences M57",
             "description": "Référentiel des compétences selon la nomenclature M57",
-            "profile": "tabular-data-resource",
             "path": "reference-data/référentiel_competences_M57_2025.csv",
             "format": "csv",
             "mediatype": "text/csv",
@@ -118,7 +114,7 @@
                         "description": "Libellé de la compétence ou sous-compétence"
                     }
                 ],
-                "primaryKey": "code"
+                "primaryKey": ["code"]
             }
         }
     ]
