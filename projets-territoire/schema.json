@@ -216,13 +216,6 @@
                    "resource": "referentiel-competences-m57",
                    "fields": ["code"]
                 }
-             },
-             {
-                "fields": ["competences"],
-                "reference": {
-                   "resource": "referentiel-competences-m57",
-                   "fields": ["sous_competences", "code"]
-                }
              }
           ],
           "examples": ["90-21", "90-413", "90-251"]
