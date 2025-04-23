@@ -31,4 +31,4 @@ jobs:
         frictionless validate --schema collectivites/schema.json collectivites/exemple-valide.csv
     - name: Vérification du datapackage
       run: |
-        frictionless validate --type package datapackage.json
+        frictionless validate datapackage.json
