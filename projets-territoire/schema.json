@@ -212,7 +212,7 @@
           "foreignKeys": {
              "fields": ["competences"],
              "reference": {
-                "resource": "referentiel-competences-m57",
+                   "resource": "referentiel-competences-m57",
                 "fields": ["code"]
              }
           },
