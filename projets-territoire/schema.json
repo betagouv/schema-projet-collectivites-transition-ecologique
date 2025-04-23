@@ -209,15 +209,13 @@
                 "pattern": "^90-[0-9]{2,3}$"
              }
           },
-          "foreignKeys": [
-             {
-                "fields": ["competences"],
-                "reference": {
-                   "resource": "referentiel-competences-m57",
-                   "fields": ["code"]
-                }
+          "foreignKey": {
+             "fields": "competences",
+             "reference": {
+                "resource": "referentiel-competences-m57",
+                "fields": "code"
              }
-          ],
+          },
           "examples": ["90-21", "90-413", "90-251"]
        },
        {
@@ -228,15 +226,13 @@
           "items": {
              "type": "string"
           },
-          "foreignKeys": [
-             {
-                "fields": "leviers",
-                "reference": {
-                   "resource": "referentiel-leviers-sgpe",
-                   "fields": ["levier"]
-                }
+          "foreignKey": {
+             "fields": "leviers",
+             "reference": {
+                "resource": "referentiel-leviers-sgpe",
+                "fields": "levier"
              }
-          ],
+          },
           "examples": ["Rénovation (hors changement chaudières)", "Electricité renouvelable"]
        },
        {
@@ -273,30 +269,30 @@
     ],
     "foreignKeys": [
        {
-          "fields": ["collectiviteIds"],
+          "fields": "collectiviteIds",
           "reference": {
              "resource": "collectivites",
-             "fields": ["id"]
+             "fields": "id"
           },
           "description": "Cette clé étrangère relie un tableau d'identifiants à la table collectivites. Pour l'implémentation, chaque valeur du tableau doit correspondre à un ID valide dans la table collectivites."
        },
        {
-          "fields": ["leviers"],
+          "fields": "leviers",
           "reference": {
              "resource": "referentiel-leviers-sgpe",
-             "fields": ["levier"]
+             "fields": "levier"
           },
           "description": "Cette clé étrangère relie les leviers à la liste de référence des leviers possibles."
        },
        {
-          "fields": ["competences"],
+          "fields": "competences",
           "reference": {
              "resource": "referentiel-competences-m57",
-             "fields": ["code"]
+             "fields": "code"
           },
           "description": "Cette clé étrangère relie les compétences aux codes principaux du référentiel M57."
        }
     ],
     "missingValues": [""],
     "primaryKey": "id"
- }
+}
