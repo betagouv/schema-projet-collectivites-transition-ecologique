@@ -85,6 +85,32 @@
                     }
                 ]
             }
+        },
+        {
+            "name": "referentiel-competences-m57",
+            "path": "reference-data/competences-collectivites.json",
+            "profile": "tabular-data-resource",
+            "format": "json",
+            "mediatype": "application/json",
+            "encoding": "utf-8",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "code",
+                        "type": "string",
+                        "constraints": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "name": "nom",
+                        "type": "string",
+                        "constraints": {
+                            "required": true
+                        }
+                    }
+                ]
+            }
         }
     ]
 }
