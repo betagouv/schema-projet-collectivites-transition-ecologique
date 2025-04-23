@@ -80,7 +80,9 @@
              "required": true,
              "enum": [
                 "Commune",
-                "EPCI"
+                "EPCI",
+                "Région",
+                "Département"
              ]
           }
        },
