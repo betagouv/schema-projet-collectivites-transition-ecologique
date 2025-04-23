@@ -230,7 +230,7 @@
              {
                 "fields": "leviers",
                 "reference": {
-                   "resource": "referentiel-leviers-TE",
+                   "resource": "referentiel-leviers-sgpe",
                    "fields": ["levier"]
                 }
              }
@@ -281,7 +281,7 @@
        {
           "fields": ["leviers"],
           "reference": {
-             "resource": "referentiel-leviers-TE",
+             "resource": "referentiel-leviers-sgpe",
              "fields": ["levier"]
           },
           "description": "Cette clé étrangère relie les leviers à la liste de référence des leviers possibles."

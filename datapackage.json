@@ -71,7 +71,7 @@
             "schema": "collectivites/schema.json"
         },
         {
-            "name": "referentiel-leviers-TE",
+            "name": "referentiel-leviers-te",
             "path": "reference-data/50_leviers_SGPE_03_2025.csv",
             "schema": {
               "fields": [
