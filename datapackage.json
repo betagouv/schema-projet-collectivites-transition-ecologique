@@ -3,6 +3,7 @@
     "title": "Schéma des projets de transition écologique des collectivités",
     "description": "Modèle de données pour décrire les projets de transition écologique menés par les collectivités territoriales, incluant les informations sur les projets et les collectivités associées.",
     "id": "schema-projet-collectivites-transition-ecologique",
+    "profile": "tabular-data-package",
     "resources": [
         {
             "name": "projets-territoire",
@@ -13,7 +14,30 @@
             "schema": "projets-territoire/schema.json",
             "format": "csv",
             "mediatype": "text/csv",
-            "encoding": "utf-8"
+            "encoding": "utf-8",
+            "foreignKeys": [
+                {
+                    "fields": ["competences"],
+                    "reference": {
+                        "resource": "referentiel-competences-m57",
+                        "fields": ["code"]
+                    }
+                },
+                {
+                    "fields": ["leviers"],
+                    "reference": {
+                        "resource": "referentiel-leviers-sgpe",
+                        "fields": ["levier"]
+                    }
+                },
+                {
+                    "fields": ["collectiviteIds"],
+                    "reference": {
+                        "resource": "collectivites",
+                        "fields": ["id"]
+                    }
+                }
+            ]
         },
         {
             "name": "collectivites",
