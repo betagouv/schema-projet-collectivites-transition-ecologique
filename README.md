@@ -48,8 +48,9 @@ Les schémas sont au format [Table Schema](https://specs.frictionlessdata.io/tab
 - `projets-transition-ecologique/` : Contient le schéma et les exemples pour la table des projets
 - `collectivites/` : Contient le schéma et les exemples pour la table des collectivités
 - `reference-data/` : Contient les référentiels :
-  - `competences-collectivites.json` : Référentiel M57 des compétences / sous-compétencec
-  - `50_leviers_SGPE_03_2025.csv` : Référentiel des leviers SGPE de la plannification écologique
+  - `référentiel_competences_M57_2025.json` : Référentiel M57 des compétences / sous-compétences sour forme de JSON strucuré,avec l'arborescence
+  -  `référentiel_competences_M57_2025.csv`: Référentiel M57 des compétences / sous-compétences sour forme de csv
+  - `50_leviers_SGPE_03_2025.csv` : Référentiel des leviers SGPE de la plannification écologique sous forme de csv
 
 ## Licence
 
