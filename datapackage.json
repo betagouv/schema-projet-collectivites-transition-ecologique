@@ -3,50 +3,6 @@
     "title": "Schéma des projets de transition écologique des collectivités",
     "description": "Modèle de données pour décrire les projets de transition écologique menés par les collectivités territoriales, incluant les informations sur les projets et les collectivités associées.",
     "id": "schema-projet-collectivites-transition-ecologique",
-    "profile": "tabular-data-package",
-    "licenses": [
-        {
-            "title": "Licence Ouverte",
-            "name": "etalab-2.0",
-            "path": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
-        }
-    ],
-    "keywords": [
-        "transition écologique",
-        "collectivité",
-        "projet",
-        "leviers",
-        "compétences"
-    ],
-    "contributors": [
-        {
-            "title": "Adrien Zemour",
-            "email": "adrien.zemour@ebeta.gouv.fr",
-            "organization": "Les communs de la transition écologique des collectivités",
-            "role": "author"
-        },
-        {
-            "title": "Jean Perret",
-            "email": "jean.perret@ebeta.gouv.fr",
-            "organization": "Les communs de la transition écologique des collectivités",
-            "role": "author"
-        },
-        {
-            "title": "Louis Boivin",
-            "email": "louis.boivin@ebeta.gouv.fr",
-            "organization": "Les communs de la transition écologique des collectivités",
-            "role": "author"
-        },
-        {
-            "title": "Matthieu Veillon",
-            "email": "matthieu.veillon@ebeta.gouv.fr",
-            "organization": "Les communs de la transition écologique des collectivités",
-            "role": "author"
-        }
-    ],
-    "homepage": "https://github.com/betagouv/schema-projet-collectivites-transition-ecologique/",
-    "created": "2025-04-15T00:00:00Z",
-    "version": "0.1.1",
     "resources": [
         {
             "name": "projets-territoire",
