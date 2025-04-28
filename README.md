@@ -18,7 +18,7 @@ Le schéma est organisé en deux tables principales et deux référentiels :
 ### Référentiels
 
 1. **Référentiel des compétences M57** : Liste hiérarchique des compétences et sous-compétences des collectivités selon la nomenclature M57
-2. **Référentiel des leviers de transition écologique** : Liste des leviers d'action disponibles pour les projets de transition écologique
+2. **Référentiel des leviers de transition écologique** : Liste des leviers d'action disponibles et leur description pour les projets de transition écologique
 
 Ces référentiels sont utilisés pour catégoriser et standardiser les données des projets.
 
