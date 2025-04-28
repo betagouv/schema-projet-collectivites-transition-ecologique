@@ -66,6 +66,12 @@
                         "type": "string",
                         "title": "Levier",
                         "description": "Nom du levier d'action"
+                    },
+                    {
+                        "name": "description",
+                        "type": "string",
+                        "title": "Description",
+                        "description": "Description détaillée du levier d'action"
                     }
                 ],
                 "primaryKey": ["levier"]
